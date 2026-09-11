@@ -8,22 +8,21 @@
      SEO / METADADOS — edite os textos desta seção livremente
      ============================================================ -->
 <title>Keven Souza | Desenvolvimento Web</title>
-<meta name="description" content="Keven Souza. Mais de 12 anos de atuação em tecnologia e sistemas, hoje em formação em desenvolvimento web. Projetos próprios em JavaScript, React e TypeScript, com regras de negócio, testes e APIs.">
+<meta name="description" content="Keven Souza, desenvolvimento web em formação. Mais de 12 anos de atuação em tecnologia e sistemas e projetos próprios em JavaScript, React e TypeScript, com testes e APIs.">
 <meta name="author" content="Keven da Silva Cruz de Souza">
-<link rel="canonical" href="./">
+<link rel="canonical" href="https://kevensouza.vercel.app/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Keven Souza">
+<meta property="og:url" content="https://kevensouza.vercel.app/">
 <meta property="og:title" content="Keven Souza | Desenvolvimento Web">
-<meta property="og:description" content="Mais de 12 anos de atuação em tecnologia e sistemas, hoje em formação em desenvolvimento web. Projetos próprios em JavaScript, React e TypeScript, com regras de negócio, testes e APIs.">
-<!-- OG:IMAGE — quando houver imagem de compartilhamento (1200x630), salve em
-     assets/images/og-keven-souza.png e descomente as três linhas abaixo.
-<meta property="og:image" content="assets/images/og-keven-souza.png">
+<meta property="og:description" content="Desenvolvimento web em formação. Mais de 12 anos de atuação em tecnologia e sistemas e projetos próprios em JavaScript, React e TypeScript, com testes e APIs.">
+<!-- IMAGEM DE COMPARTILHAMENTO: quando existir uma imagem 1200x630, salve em
+     assets/images/og-keven-souza.png e remova os marcadores de comentário.
+<meta property="og:image" content="https://kevensouza.vercel.app/assets/images/og-keven-souza.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
--->
-<!-- OG:URL — descomente e troque pelo endereço final no dia da publicação.
-<meta property="og:url" content="https://SEU-DOMINIO/">
 -->
 
 <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
@@ -186,16 +185,16 @@
           </div>
           <div class="phase-body">
             <h4 class="phase-title">Quando a regra saiu da tela</h4>
-            <p class="phase-jump"><span class="mono">O salto técnico</span> Regra de negócio separada da UI, testes, persistência, banco e segurança.</p>
+            <p class="phase-jump"><span class="mono">O salto técnico</span> Regra de negócio separada da interface, testes, persistência, banco e segurança.</p>
             <p>
               Um workspace para advogado autônomo e escritório pequeno. Casos,
               prazos, honorários, parcelas, recebimentos, estornos e repasses
               não cabiam mais dentro das funções da interface. Separei o que
               decide do que desenha: a regra virou módulo puro, testável em
-              Node, e o banco passou a validar e isolar os dados.
+              Node.js, e o banco passou a validar e isolar os dados.
             </p>
             <ul class="marks">
-              <li>Regra de negócio fora da UI, em módulos puros com teste unitário.</li>
+              <li>Regra de negócio fora da interface, em módulos puros com teste unitário.</li>
               <li>Histórico financeiro append-only: erro se corrige por registro novo, nunca por sobrescrita.</li>
               <li>PostgreSQL com isolamento por conta e políticas de acesso por linha.</li>
             </ul>
@@ -213,9 +212,10 @@
             <h4 class="phase-title">O problema deixou de ser gerar código</h4>
             <p class="phase-jump"><span class="mono">O salto técnico</span> Contexto persistente, decisões registradas, guardrails e gates humanos.</p>
             <p>
-              Com o projeto grande, gerar código deixou de ser o gargalo. O caro
-              era reexplicar contexto a cada sessão, rediscutir decisão já
-              tomada e confiar em teste verde que não exercitava o caminho real.
+              Com o projeto grande, gerar código deixou de ser o gargalo. O
+              custo passou a ser reexplicar contexto a cada sessão, rediscutir
+              decisão já tomada e confiar em teste verde que não exercitava o
+              caminho real.
               Passei a registrar decisões e aprendizados em uma base própria,
               consultada antes de começar.
             </p>
@@ -230,9 +230,9 @@
         <!-- Conector: as fases 3 e 4 correram em paralelo -->
         <li class="phase-link">
           <p>
-            As fases 3 e 4 amadureceram em paralelo. O Motopeças foi o primeiro
-            projeto a crescer já absorvendo os aprendizados que o Jurídico
-            custou para produzir.
+            As fases 3 e 4 amadureceram em paralelo. O e-commerce foi o primeiro
+            projeto a crescer já absorvendo os aprendizados que o Painel
+            Jurídico custou para produzir.
           </p>
         </li>
 
@@ -240,14 +240,14 @@
         <li class="phase">
           <div class="phase-meta">
             <p class="mono phase-number">Fase 04</p>
-            <h3 class="phase-project">Shopping das Motopeças</h3>
+            <h3 class="phase-project">E-commerce de Motopeças</h3>
             <p class="mono phase-stack">React · TypeScript · Vite · Playwright · GitHub Actions</p>
           </div>
           <div class="phase-body">
             <h4 class="phase-title">React e TypeScript com as lições já pagas</h4>
-            <p class="phase-jump"><span class="mono">O salto técnico</span> Componentização, tipagem, E2E, acessibilidade, CI e preparo para integrações.</p>
+            <p class="phase-jump"><span class="mono">O salto técnico</span> Componentização, tipagem, testes ponta a ponta, acessibilidade, CI e preparo para integrações.</p>
             <p>
-              Aplicação web para a jornada de descoberta, pedido e retirada de
+              Aplicação web para a jornada de descoberta, pedido e retirada em
               uma operação de motopeças. Nem tudo o que eu tinha aprendido antes
               se aplicou, então cada aprendizado entrou com justificativa ou
               ficou de fora. Aqui a tipagem passou a fazer parte do desenho:
@@ -274,7 +274,7 @@
           <li>persistência, banco e segurança</li>
           <li>processo e contexto de trabalho</li>
           <li>React e TypeScript</li>
-          <li>E2E, acessibilidade e CI</li>
+          <li>testes ponta a ponta, acessibilidade e CI</li>
           <li>fronteiras para integração futura</li>
         </ol>
       </div>
@@ -296,81 +296,52 @@
         </p>
       </div>
 
-      <!-- ---------- PROJETO: PAINEL JURÍDICO ---------- -->
-      <article class="project">
-        <header class="project-head">
-          <h3>Painel Jurídico</h3>
-          <p class="mono project-stack">JavaScript · Supabase · PostgreSQL · Vitest · Playwright</p>
-        </header>
-        <div class="project-body">
+      <!-- ---------- PROJETO: E-COMMERCE DE MOTOPEÇAS ---------- -->
+      <article class="project-feature">
+        <div class="project-copy">
+          <p class="mono project-number">01</p>
+          <h3>E-commerce de Motopeças</h3>
+          <p class="mono project-stack">React · TypeScript · Vite · Playwright</p>
           <p class="project-lead">
-            Workspace jurídico em desenvolvimento para profissionais autônomos e
-            pequenos escritórios, com gestão de casos, prazos, financeiro e
-            histórico operacional.
+            Aplicação web demonstrativa para descoberta de peças, pedido e retirada presencial.
           </p>
           <ul class="marks">
-            <li>Regras financeiras fora da interface, em módulos puros e testáveis.</li>
-            <li>Recebimentos e estornos com histórico preservado.</li>
-            <li>Testes em múltiplas camadas, do domínio à jornada no navegador.</li>
-            <li>Autenticação de beta e isolamento de dados por conta.</li>
-            <li>Evolução arquitetural registrada decisão a decisão.</li>
+            <li>Fluxo de catálogo, carrinho, checkout e retirada como parte de uma mesma jornada.</li>
+            <li>Regras de cotação tratadas antes de qualquer confirmação de pedido.</li>
+            <li>Testes, acessibilidade e GitHub Actions como apoio à validação.</li>
           </ul>
-          <p class="project-status">
-            <span class="dot" aria-hidden="true"></span>
-            Projeto privado · Case técnico em preparação
-          </p>
-          <!-- ===== CASE TÉCNICO: painel-juridico-showcase ====================
-               Quando a página do case existir, troque URL-DO-CASE pelo endereço
-               real e remova os marcadores de comentário do parágrafo abaixo.
-          <p class="project-case"><a class="link-arrow" href="URL-DO-CASE">Ver case técnico</a></p>
-          ================================================================== -->
+          <p class="project-case"><a class="link-arrow" href="https://github.com/kevensouza-dev/ecommerce-motopecas-showcase" target="_blank" rel="noopener noreferrer">Ver case técnico</a></p>
         </div>
+        <a class="project-media" href="https://github.com/kevensouza-dev/ecommerce-motopecas-showcase" target="_blank" rel="noopener noreferrer" aria-label="Abrir case técnico do E-commerce de Motopeças">
+          <img src="assets/projects/ecommerce-motopecas-home.webp" alt="Página inicial demonstrativa do E-commerce de Motopeças, com busca de peças e retirada presencial" width="1586" height="992" loading="lazy" decoding="async">
+        </a>
       </article>
 
-      <!-- ---------- PROJETO: SHOPPING DAS MOTOPEÇAS ---------- -->
-      <article class="project">
-        <header class="project-head">
-          <h3>Shopping das Motopeças</h3>
-          <p class="mono project-stack">React · TypeScript · Vite · Playwright · GitHub Actions</p>
-        </header>
-        <div class="project-body">
+      <!-- ---------- PROJETO: PAINEL JURÍDICO ---------- -->
+      <article class="project-feature project-feature--reversed">
+        <div class="project-copy">
+          <p class="mono project-number">02</p>
+          <h3>Painel Jurídico</h3>
+          <p class="mono project-stack">JavaScript · Supabase · PostgreSQL · Vitest · Playwright</p>
           <p class="project-lead">
-            Aplicação web em desenvolvimento para digitalizar a jornada de
-            descoberta, pedido e retirada de produtos de uma operação de
-            motopeças.
+            Aplicação web para organizar casos, prazos e rotinas financeiras de advogados e escritórios pequenos.
           </p>
           <ul class="marks">
-            <li>Storefront com catálogo, busca, compatibilidade e carrinho.</li>
-            <li>Checkout com cotação assíncrona simulada antes de qualquer confirmação.</li>
-            <li>Pedidos com estados operacionais separados do estado de pagamento.</li>
-            <li>Área administrativa demonstrativa, com fila operacional e relatórios locais.</li>
-            <li>Testes automatizados, acessibilidade verificada e CI a cada push.</li>
+            <li>Regras de negócio e domínio financeiro tratados fora da interface.</li>
+            <li>Recebimentos corrigidos por estorno, com histórico preservado.</li>
+            <li>Separação gradual entre interface e persistência, apoiada por testes.</li>
           </ul>
-          <p class="project-status">
-            <span class="dot" aria-hidden="true"></span>
-            Projeto privado · Case técnico em preparação
-          </p>
-          <!-- ===== CASE TÉCNICO: shopping-motopecas-showcase =================
-               Quando a página do case existir, troque URL-DO-CASE pelo endereço
-               real e remova os marcadores de comentário do parágrafo abaixo.
-          <p class="project-case"><a class="link-arrow" href="URL-DO-CASE">Ver case técnico</a></p>
-          ================================================================== -->
+          <p class="project-case"><a class="link-arrow" href="https://github.com/kevensouza-dev/painel-juridico-showcase" target="_blank" rel="noopener noreferrer">Ver case técnico</a></p>
         </div>
+        <a class="project-media" href="https://github.com/kevensouza-dev/painel-juridico-showcase" target="_blank" rel="noopener noreferrer" aria-label="Abrir case técnico do Painel Jurídico">
+          <img src="assets/projects/painel-juridico-dashboard.webp" alt="Painel demonstrativo do Painel Jurídico, com prazos e posição financeira da carteira" width="1440" height="900" loading="lazy" decoding="async">
+        </a>
       </article>
 
       <p class="note">
-        Os projetos principais são mantidos em repositórios privados por
-        envolverem produtos em desenvolvimento e propriedade intelectual. Os
-        cases públicos apresentam arquitetura, decisões técnicas,
-        funcionalidades, testes e aprendizados sem expor código ou informações
-        sensíveis.
-      </p>
-
-      <p class="note note-demo">
-        Nos dois projetos, integrações externas são demonstrativas e se declaram
-        como tal: pagamento, ERP e notificação são simulados com dados
-        fictícios. O que está construído é a fronteira; a integração real ainda
-        não existe.
+        Os projetos principais são mantidos em repositórios privados. Os cases
+        públicos apresentam arquitetura, decisões, funcionalidades, testes e
+        aprendizados sem expor código ou informações sensíveis.
       </p>
     </div>
   </section>
@@ -491,8 +462,8 @@
             <li>React</li>
             <li>HTML</li>
             <li>CSS</li>
-            <li>Git &amp; GitHub</li>
-            <li>REST APIs</li>
+            <li>Git e GitHub</li>
+            <li>APIs REST</li>
           </ul>
         </section>
 
@@ -529,10 +500,10 @@
         <p class="section-index mono">05</p>
         <h2 id="experiencia-titulo">Experiência e formação</h2>
         <p class="section-intro">
-          Comecei configurando plataforma, testando, dando suporte técnico e
-          analisando operação. Nos últimos anos passei a levantar requisito,
-          desenhar solução e homologar entrega. É essa leitura de requisito e de
-          regra de negócio que eu levo para o desenvolvimento.
+          Comecei configurando plataformas, testando, dando suporte técnico e
+          analisando operações. Nos últimos anos passei a levantar requisitos,
+          desenhar soluções e homologar entregas. É essa leitura de requisito e
+          de regra de negócio que eu levo para o desenvolvimento.
         </p>
       </div>
 
@@ -549,7 +520,7 @@
                 <li>Desenho funcional de soluções e elaboração de SOW, definindo escopo técnico, premissas e critérios de entrega.</li>
                 <li>Leitura de documentação técnica e de APIs, com testes em Postman: requests, responses, JSON e retornos de integração.</li>
                 <li>Testes funcionais, validações e homologações em projetos de implantação e customização da plataforma SaaS.</li>
-                <li>Interface entre cliente, Comercial, Desenvolvimento e Operações, traduzindo necessidade de negócio em requisito técnico.</li>
+                <li>Interface entre cliente, Comercial, Desenvolvimento e Operações, traduzindo necessidades de negócio em requisitos técnicos.</li>
               </ul>
             </li>
 
@@ -588,7 +559,7 @@
 
           <section class="xp-block">
             <h3>Cursos</h3>
-            <p class="xp-item-title">JavaScript, prática de programação</p>
+            <p class="xp-item-title">JavaScript: prática de programação</p>
             <p class="xp-item-org">Codédex · em andamento, conteúdo em inglês</p>
             <p class="xp-item-title">Lógica de Programação e JavaScript</p>
             <p class="xp-item-org">Alura</p>

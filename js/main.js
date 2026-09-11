@@ -111,7 +111,7 @@
   if (movimentoOk && !document.hidden && 'IntersectionObserver' in window) {
     var alvos = Array.prototype.slice.call(
       document.querySelectorAll(
-        '.phase, .phase-link, .project, .path, .mechanisms > div, .brain, .stack-col, .role, .xp-block, .contact-links li'
+        '.phase, .phase-link, .project-feature, .path, .mechanisms > div, .brain, .stack-col, .role, .xp-block, .contact-links li'
       )
     );
 

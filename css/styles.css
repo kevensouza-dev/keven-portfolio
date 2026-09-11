@@ -414,38 +414,66 @@ img{ max-width:100%; display:block; }
 .path-steps li:last-child::after{ content:none; }
 
 /* ---------- 8. PROJETOS ---------- */
-.project{
+.project-feature{
   display:grid;
-  grid-template-columns:232px minmax(0,1fr);
-  gap:52px;
-  padding:44px 0;
+  grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
+  gap:72px;
+  align-items:center;
+  padding:64px 0;
   border-top:1px solid var(--line);
 }
-.project:first-of-type{ border-top:none; padding-top:0; }
-.project-head h3{
-  font-size:23px; letter-spacing:-.024em;
-  margin-bottom:12px;
+.project-feature:first-of-type{ border-top:none; padding-top:0; }
+/* No bloco invertido a imagem vai para a primeira coluna. As proporções são
+   espelhadas junto, para que as duas imagens fiquem com a mesma largura. */
+.project-feature--reversed{ grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr); }
+.project-feature--reversed .project-media{ order:-1; }
+.project-number{
+  font-size:12px;
+  color:var(--petrol-soft);
+  letter-spacing:.16em;
+  margin-bottom:14px;
+}
+.project-copy h3{
+  font-size:clamp(28px,3vw,38px);
+  letter-spacing:-.03em;
+  margin-bottom:14px;
 }
 .project-stack{
-  font-size:12.5px; color:var(--muted); line-height:1.85;
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.7;
+  text-transform:uppercase;
+  letter-spacing:.055em;
+  margin-bottom:26px;
 }
 .project-lead{
-  font-size:18px; color:var(--graphite);
-  max-width:60ch;
-  margin-bottom:20px;
+  font-size:19px;
+  color:var(--graphite);
+  max-width:43ch;
+  margin-bottom:22px;
 }
-.project-body .marks{ max-width:64ch; }
-.project-status{
-  display:flex; align-items:center; gap:9px;
-  margin-top:24px;
-  font-size:13.5px; color:var(--muted);
+.project-copy .marks{ max-width:48ch; }
+.project-case{ margin:26px 0 0; }
+.project-case .link-arrow{
+  display:inline-flex;
+  align-items:center;
+  min-height:44px;
+  border-bottom:1px solid var(--accent);
 }
-.project-status .dot{
-  width:7px; height:7px; border-radius:50%;
-  background:var(--accent);
-  flex:0 0 auto;
+.project-media{
+  display:block;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:var(--surface);
 }
-.project-case{ margin-top:14px; }
+.project-media img{
+  width:100%;
+  height:auto;
+  aspect-ratio:8 / 5;
+  object-fit:cover;
+  transition:transform .24s ease;
+}
+.project-media:hover img{ transform:scale(1.015); }
 .link-arrow{ font-size:15px; font-weight:500; }
 .link-arrow::after{ content:" →"; }
 
@@ -664,9 +692,17 @@ img{ max-width:100%; display:block; }
   color:var(--muted);
 }
 .contact-links a{
+  position:relative;
   font-size:15.5px; font-weight:500;
   border-bottom:1px solid transparent;
   overflow-wrap:anywhere;
+}
+/* Área clicável de 45px sem mexer na aparência: a linha do texto tem 21px e
+   o pseudo-elemento a estende para dentro do espaçamento da própria linha. */
+.contact-links a::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; top:-12px; bottom:-12px;
 }
 .contact-links a:hover{ border-bottom-color:var(--accent); }
 
@@ -690,7 +726,8 @@ img{ max-width:100%; display:block; }
 @media (max-width:1080px){
   :root{ --section-y:88px; --gutter:28px; }
   .hero-grid{ grid-template-columns:minmax(0,1fr) 236px; gap:48px; }
-  .phase,.phase-link,.project{ grid-template-columns:196px minmax(0,1fr); gap:36px; }
+  .phase,.phase-link{ grid-template-columns:196px minmax(0,1fr); gap:36px; }
+  .project-feature{ gap:48px; }
   .method-grid,.xp-grid{ gap:48px; }
   .contact-links li{ padding-right:20px; }
   .contact-links li + li{ padding-left:20px; }
@@ -750,8 +787,8 @@ img{ max-width:100%; display:block; }
   .phase-body::before{ top:2px; }
   .phase-link p{ grid-column:1; padding-left:34px; }
 
-  .project{ grid-template-columns:minmax(0,1fr); gap:18px; }
-  .project-stack{ line-height:1.65; }
+  .project-feature{ grid-template-columns:minmax(0,1fr); gap:30px; }
+  .project-feature--reversed .project-media{ order:0; }
 
   .method-grid{ grid-template-columns:minmax(0,1fr); gap:44px; }
   .brain-cols{ grid-template-columns:minmax(0,1fr); gap:0; }
@@ -817,9 +854,10 @@ img{ max-width:100%; display:block; }
   .path-steps{ font-size:12.5px; }
   .path-steps li::after{ margin:0 7px; }
 
-  .project{ padding:32px 0; }
-  .project-head h3{ font-size:21px; }
-  .project-lead{ font-size:17px; }
+  .project-feature{ gap:24px; padding:48px 0; }
+  .project-copy h3{ font-size:28px; }
+  .project-stack{ margin-bottom:20px; }
+  .project-lead{ font-size:17.5px; }
   .note{ margin-top:32px; padding-left:16px; }
 
   .method-text p{ font-size:16.5px; }
