@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ============================================================
+     SEO / METADADOS — edite os textos desta seção livremente
+     ============================================================ -->
+<title>Keven Souza | Desenvolvimento Web</title>
+<meta name="description" content="Keven Souza. Mais de 12 anos de atuação em tecnologia e sistemas, hoje em formação em desenvolvimento web. Projetos próprios em JavaScript, React e TypeScript, com regras de negócio, testes e APIs.">
+<meta name="author" content="Keven da Silva Cruz de Souza">
+<link rel="canonical" href="./">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Keven Souza | Desenvolvimento Web">
+<meta property="og:description" content="Mais de 12 anos de atuação em tecnologia e sistemas, hoje em formação em desenvolvimento web. Projetos próprios em JavaScript, React e TypeScript, com regras de negócio, testes e APIs.">
+<!-- OG:IMAGE — quando houver imagem de compartilhamento (1200x630), salve em
+     assets/images/og-keven-souza.png e descomente as três linhas abaixo.
+<meta property="og:image" content="assets/images/og-keven-souza.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+-->
+<!-- OG:URL — descomente e troque pelo endereço final no dia da publicação.
+<meta property="og:url" content="https://SEU-DOMINIO/">
+-->
+
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icons/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+<!-- ============================================================
+     CABEÇALHO / NAVEGAÇÃO
+     ============================================================ -->
+<header class="site-header" id="topo">
+  <div class="wrap header-inner">
+    <a class="brand" href="#topo">
+      <span class="brand-mark" aria-hidden="true">KS</span>
+      <span class="brand-name">Keven Souza</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-principal">
+      <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i></span>
+      <span class="nav-toggle-text">Menu</span>
+    </button>
+
+    <nav class="nav" id="nav-principal" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#evolucao">Evolução</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#metodo">Método</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" aria-labelledby="hero-titulo">
+    <div class="wrap hero-grid">
+
+      <div class="hero-main">
+        <h1 id="hero-titulo">Keven Souza</h1>
+        <p class="hero-role">Desenvolvimento Web em formação</p>
+        <p class="mono hero-stack">JavaScript · React · TypeScript · APIs · Testes · Git</p>
+
+        <div class="hero-text">
+          <p class="lead">
+            Profissional com mais de 12 anos de atuação em tecnologia e
+            sistemas. Minha trajetória começou em funções técnicas: configuração
+            de plataformas, testes, suporte operacional, treinamento e
+            planejamento de estratégias de operação.
+          </p>
+          <p>
+            Nos últimos anos, minha atuação passou a envolver pré-vendas
+            técnicas, levantamento de requisitos, desenho de soluções, APIs,
+            testes e homologação em ambientes SaaS. Hoje curso Análise e
+            Desenvolvimento de Sistemas e aprofundo essa experiência na prática:
+            defino a lógica e as regras, conduzo a implementação com apoio de IA,
+            testo e reviso o resultado em projetos próprios.
+          </p>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+          <a class="btn" href="https://linkedin.com/in/keven-souza-a89287110" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/kevensouza-dev" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="assets/Keven-Souza-CV.pdf" download>Baixar currículo</a>
+        </div>
+      </div>
+
+      <aside class="hero-rail" aria-label="Ficha profissional">
+        <!-- FOTO — para trocar, substitua assets/images/keven-souza.jpg por
+             outro recorte quadrado. Se o arquivo faltar, entra um monograma
+             discreto no lugar, sem imagem quebrada. -->
+        <figure class="portrait" data-portrait>
+          <img src="assets/images/keven-souza.jpg" alt="Retrato de Keven Souza" width="700" height="700" decoding="async">
+          <figcaption class="portrait-fallback" aria-hidden="true">
+            <span>KS</span>
+            <small>foto pendente</small>
+          </figcaption>
+        </figure>
+
+        <dl class="facts">
+          <div><dt>Local</dt><dd>São Paulo, SP</dd></div>
+          <div><dt>Formação</dt><dd>ADS · 3º semestre</dd></div>
+          <div><dt>Foco</dt><dd>Front-end · Web · Aplicações</dd></div>
+          <div><dt>Idiomas</dt><dd>Português nativo · Inglês intermediário</dd></div>
+        </dl>
+      </aside>
+
+    </div>
+
+    <div class="wrap">
+      <ul class="figures">
+        <li><strong>+12 anos</strong><span>atuação em tecnologia e sistemas</span></li>
+        <li><strong>ADS</strong><span>3º semestre</span></li>
+        <li><strong>2 produtos</strong><span>em desenvolvimento</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       01 · MINHA EVOLUÇÃO — seção central do site
+       ============================================================ -->
+  <section class="section" id="evolucao" aria-labelledby="evolucao-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-index mono">01</p>
+        <h2 id="evolucao-titulo">Minha evolução</h2>
+        <p class="section-intro">
+          Não aprendi desenvolvimento de forma linear. Aprendi resolvendo os
+          problemas que os meus próprios projetos criaram. Cada fase começou
+          quando a anterior deixou de dar conta.
+        </p>
+      </div>
+
+      <ol class="timeline">
+
+        <!-- FASE 1 -->
+        <li class="phase">
+          <div class="phase-meta">
+            <p class="mono phase-number">Fase 01</p>
+            <h3 class="phase-project">Painel de Dívidas</h3>
+            <p class="mono phase-stack">HTML · CSS · JavaScript</p>
+          </div>
+          <div class="phase-body">
+            <h4 class="phase-title">O primeiro laboratório</h4>
+            <p class="phase-jump"><span class="mono">O salto técnico</span> Interface, estado e as primeiras regras de cálculo que eu precisei definir e conferir.</p>
+            <p>
+              Um painel para organizar dívidas, parcelas e pagamentos. O fluxo
+              era simples: ideia, alteração nos arquivos, conferência na tela.
+              Foi ali que encostei pela primeira vez em interface, estado,
+              persistência local e regra de cálculo.
+            </p>
+            <ul class="marks">
+              <li>HTML, CSS e JavaScript diretos, sem framework e sem build.</li>
+              <li>Estado da aplicação e persistência local no navegador.</li>
+              <li>Primeiros fluxos e regras: parcelas, saldos e pagamentos.</li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- FASE 2 -->
+        <li class="phase">
+          <div class="phase-meta">
+            <p class="mono phase-number">Fase 02</p>
+            <h3 class="phase-project">Painel Jurídico</h3>
+            <p class="mono phase-stack">JavaScript · Supabase · PostgreSQL · Vitest · Playwright</p>
+          </div>
+          <div class="phase-body">
+            <h4 class="phase-title">Quando a regra saiu da tela</h4>
+            <p class="phase-jump"><span class="mono">O salto técnico</span> Regra de negócio separada da UI, testes, persistência, banco e segurança.</p>
+            <p>
+              Um workspace para advogado autônomo e escritório pequeno. Casos,
+              prazos, honorários, parcelas, recebimentos, estornos e repasses
+              não cabiam mais dentro das funções da interface. Separei o que
+              decide do que desenha: a regra virou módulo puro, testável em
+              Node, e o banco passou a validar e isolar os dados.
+            </p>
+            <ul class="marks">
+              <li>Regra de negócio fora da UI, em módulos puros com teste unitário.</li>
+              <li>Histórico financeiro append-only: erro se corrige por registro novo, nunca por sobrescrita.</li>
+              <li>PostgreSQL com isolamento por conta e políticas de acesso por linha.</li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- FASE 3 -->
+        <li class="phase">
+          <div class="phase-meta">
+            <p class="mono phase-number">Fase 03</p>
+            <h3 class="phase-project">Segundo Cérebro</h3>
+            <p class="mono phase-stack">Decisions · Lessons · Skills · Agents</p>
+          </div>
+          <div class="phase-body">
+            <h4 class="phase-title">O problema deixou de ser gerar código</h4>
+            <p class="phase-jump"><span class="mono">O salto técnico</span> Contexto persistente, decisões registradas, guardrails e gates humanos.</p>
+            <p>
+              Com o projeto grande, gerar código deixou de ser o gargalo. O caro
+              era reexplicar contexto a cada sessão, rediscutir decisão já
+              tomada e confiar em teste verde que não exercitava o caminho real.
+              Passei a registrar decisões e aprendizados em uma base própria,
+              consultada antes de começar.
+            </p>
+            <ul class="marks">
+              <li>Decisão registrada com contexto, alternativas e consequência.</li>
+              <li>Guardrails para bloquear o que não pode acontecer sem autorização minha.</li>
+              <li>Gates humanos onde automação não deve decidir sozinha.</li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Conector: as fases 3 e 4 correram em paralelo -->
+        <li class="phase-link">
+          <p>
+            As fases 3 e 4 amadureceram em paralelo. O Motopeças foi o primeiro
+            projeto a crescer já absorvendo os aprendizados que o Jurídico
+            custou para produzir.
+          </p>
+        </li>
+
+        <!-- FASE 4 -->
+        <li class="phase">
+          <div class="phase-meta">
+            <p class="mono phase-number">Fase 04</p>
+            <h3 class="phase-project">Shopping das Motopeças</h3>
+            <p class="mono phase-stack">React · TypeScript · Vite · Playwright · GitHub Actions</p>
+          </div>
+          <div class="phase-body">
+            <h4 class="phase-title">React e TypeScript com as lições já pagas</h4>
+            <p class="phase-jump"><span class="mono">O salto técnico</span> Componentização, tipagem, E2E, acessibilidade, CI e preparo para integrações.</p>
+            <p>
+              Aplicação web para a jornada de descoberta, pedido e retirada de
+              uma operação de motopeças. Nem tudo o que eu tinha aprendido antes
+              se aplicou, então cada aprendizado entrou com justificativa ou
+              ficou de fora. Aqui a tipagem passou a fazer parte do desenho:
+              contratos e estados de pedido estão descritos em TypeScript antes
+              de existir qualquer integração real.
+            </p>
+            <ul class="marks">
+              <li>React com componentes, hooks e providers; services, repositories e adapters separados.</li>
+              <li>Testes ponta a ponta com Playwright e verificação de acessibilidade com Axe.</li>
+              <li>Integração contínua no GitHub Actions e fronteira única preparada para ERP e gateway futuros.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+
+      <!-- Resumo do percurso -->
+      <div class="path">
+        <h3 class="path-title mono">O percurso, em ordem</h3>
+        <ol class="path-steps mono">
+          <li>HTML, CSS e JavaScript</li>
+          <li>regras de negócio</li>
+          <li>interface separada da lógica</li>
+          <li>testes</li>
+          <li>persistência, banco e segurança</li>
+          <li>processo e contexto de trabalho</li>
+          <li>React e TypeScript</li>
+          <li>E2E, acessibilidade e CI</li>
+          <li>fronteiras para integração futura</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       02 · PROJETOS
+       ============================================================ -->
+  <section class="section section-alt" id="projetos" aria-labelledby="projetos-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-index mono">02</p>
+        <h2 id="projetos-titulo">Projetos</h2>
+        <p class="section-intro">
+          Dois produtos em desenvolvimento ativo. São eles que puxam o que eu
+          estudo: cada funcionalidade nova traz um problema técnico que eu ainda
+          não tinha enfrentado.
+        </p>
+      </div>
+
+      <!-- ---------- PROJETO: PAINEL JURÍDICO ---------- -->
+      <article class="project">
+        <header class="project-head">
+          <h3>Painel Jurídico</h3>
+          <p class="mono project-stack">JavaScript · Supabase · PostgreSQL · Vitest · Playwright</p>
+        </header>
+        <div class="project-body">
+          <p class="project-lead">
+            Workspace jurídico em desenvolvimento para profissionais autônomos e
+            pequenos escritórios, com gestão de casos, prazos, financeiro e
+            histórico operacional.
+          </p>
+          <ul class="marks">
+            <li>Regras financeiras fora da interface, em módulos puros e testáveis.</li>
+            <li>Recebimentos e estornos com histórico preservado.</li>
+            <li>Testes em múltiplas camadas, do domínio à jornada no navegador.</li>
+            <li>Autenticação de beta e isolamento de dados por conta.</li>
+            <li>Evolução arquitetural registrada decisão a decisão.</li>
+          </ul>
+          <p class="project-status">
+            <span class="dot" aria-hidden="true"></span>
+            Projeto privado · Case técnico em preparação
+          </p>
+          <!-- ===== CASE TÉCNICO: painel-juridico-showcase ====================
+               Quando a página do case existir, troque URL-DO-CASE pelo endereço
+               real e remova os marcadores de comentário do parágrafo abaixo.
+          <p class="project-case"><a class="link-arrow" href="URL-DO-CASE">Ver case técnico</a></p>
+          ================================================================== -->
+        </div>
+      </article>
+
+      <!-- ---------- PROJETO: SHOPPING DAS MOTOPEÇAS ---------- -->
+      <article class="project">
+        <header class="project-head">
+          <h3>Shopping das Motopeças</h3>
+          <p class="mono project-stack">React · TypeScript · Vite · Playwright · GitHub Actions</p>
+        </header>
+        <div class="project-body">
+          <p class="project-lead">
+            Aplicação web em desenvolvimento para digitalizar a jornada de
+            descoberta, pedido e retirada de produtos de uma operação de
+            motopeças.
+          </p>
+          <ul class="marks">
+            <li>Storefront com catálogo, busca, compatibilidade e carrinho.</li>
+            <li>Checkout com cotação assíncrona simulada antes de qualquer confirmação.</li>
+            <li>Pedidos com estados operacionais separados do estado de pagamento.</li>
+            <li>Área administrativa demonstrativa, com fila operacional e relatórios locais.</li>
+            <li>Testes automatizados, acessibilidade verificada e CI a cada push.</li>
+          </ul>
+          <p class="project-status">
+            <span class="dot" aria-hidden="true"></span>
+            Projeto privado · Case técnico em preparação
+          </p>
+          <!-- ===== CASE TÉCNICO: shopping-motopecas-showcase =================
+               Quando a página do case existir, troque URL-DO-CASE pelo endereço
+               real e remova os marcadores de comentário do parágrafo abaixo.
+          <p class="project-case"><a class="link-arrow" href="URL-DO-CASE">Ver case técnico</a></p>
+          ================================================================== -->
+        </div>
+      </article>
+
+      <p class="note">
+        Os projetos principais são mantidos em repositórios privados por
+        envolverem produtos em desenvolvimento e propriedade intelectual. Os
+        cases públicos apresentam arquitetura, decisões técnicas,
+        funcionalidades, testes e aprendizados sem expor código ou informações
+        sensíveis.
+      </p>
+
+      <p class="note note-demo">
+        Nos dois projetos, integrações externas são demonstrativas e se declaram
+        como tal: pagamento, ERP e notificação são simulados com dados
+        fictícios. O que está construído é a fronteira; a integração real ainda
+        não existe.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       03 · COMO EU DESENVOLVO  (bloco invertido)
+       ============================================================ -->
+  <section class="section section-dark" id="metodo" aria-labelledby="metodo-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-index mono">03</p>
+        <h2 id="metodo-titulo">Como eu desenvolvo</h2>
+        <p class="section-intro">
+          O assunto aqui é construir e manter software. Nada disso veio de
+          metodologia: cada hábito abaixo nasceu de alguma coisa que deu errado
+          enquanto eu construía os dois projetos.
+        </p>
+      </div>
+
+      <div class="method-grid">
+        <div class="method-text">
+          <p>
+            Comecei pedindo alterações no chat e conferindo o resultado na tela.
+            Funcionou enquanto os projetos eram pequenos.
+          </p>
+          <p>
+            Quando cresceram, os problemas mudaram de lugar. Eu reexplicava
+            contexto a cada sessão. Decisões já tomadas voltavam a ser
+            discutidas. A documentação podia divergir do código sem ninguém
+            perceber. E um teste verde nem sempre significava que o
+            comportamento certo tinha sido exercitado.
+          </p>
+          <p>
+            Então comecei a escrever o que já tinha sido decidido, o que tinha
+            dado errado e por quê. Depois organizei isso de um jeito que as
+            ferramentas de IA pudessem consultar antes de começar a trabalhar.
+          </p>
+          <p class="method-close">
+            Hoje o ciclo é: entender o problema, ver o que já foi decidido,
+            definir o comportamento esperado, conduzir a implementação com apoio
+            de IA, mexer só no que precisa, testar rodando, revisar o resultado
+            com desconfiança e manter a decisão final comigo.
+          </p>
+        </div>
+
+        <dl class="mechanisms">
+          <div>
+            <dt>Escopo pequeno por vez</dt>
+            <dd>Área que já funciona só volta para a mesa se houver motivo: uma mudança que a afete, um teste apontando problema ou um requisito novo. Diff grande esconde erro.</dd>
+          </div>
+          <div>
+            <dt>Testar rodando</dt>
+            <dd>Resultado anterior não vale como prova. Se o comportamento mudou, eu executo de novo. E desconfio de teste que passa sem exercitar o caminho real.</dd>
+          </div>
+          <div>
+            <dt>Revisão de escopo estreito</dt>
+            <dd>Peço uma segunda leitura sobre um pedaço específico: este diff, esta tela, esta política de acesso. Revisão genérica não encontra nada.</dd>
+          </div>
+          <div>
+            <dt>Contexto escrito</dt>
+            <dd>Uma base pessoal com as decisões que já tomei, os erros que já paguei e os conceitos que se repetem entre projetos. É o que eu leio antes de voltar ao código.</dd>
+          </div>
+          <div>
+            <dt>Travas para o que é irreversível</dt>
+            <dd>Publicar, escrever em ambiente remoto e apagar dado só acontecem com autorização minha, explícita, naquele pedido. Sem ela, o comando não roda.</dd>
+          </div>
+          <div>
+            <dt>A aprovação é minha</dt>
+            <dd>Criei uma rotina de crítica visual depois de perceber que uma tela podia estar tecnicamente correta e ainda assim ruim de olhar. A IA pode reprovar; aprovar, só eu.</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="brain">
+        <h3>A base que eu consulto</h3>
+        <div class="brain-cols">
+          <p>
+            É uma base pessoal em Markdown onde registro decisões, aprendizados
+            e conceitos reutilizáveis dos meus projetos. Ela existe por um
+            motivo prático: cada sessão de trabalho e cada ferramenta de IA
+            começa sem saber nada do que veio antes, e o que sobrevive é só o
+            que está escrito.
+          </p>
+          <p>
+            Conhecimento geral e aprendizado reutilizável circulam entre
+            projetos. Decisão específica, arquitetura e estado atual de um
+            projeto ficam onde nasceram. O que não se aplica também fica
+            registrado, com o motivo. Foi isso que me impediu de levar o desenho
+            de um sistema jurídico para dentro de um e-commerce só porque tinha
+            funcionado antes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       04 · STACK
+       ============================================================ -->
+  <section class="section" id="stack" aria-labelledby="stack-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-index mono">04</p>
+        <h2 id="stack-titulo">Stack</h2>
+        <p class="section-intro">
+          Separada por nível de uso real. Não tenho o mesmo domínio em tudo, e
+          essa distinção me parece mais honesta para quem for me avaliar.
+        </p>
+      </div>
+
+      <div class="stack-grid">
+        <section class="stack-col" aria-labelledby="stack-uso">
+          <h3 id="stack-uso">Uso atual</h3>
+          <p class="stack-note">O que eu leio, altero e reviso no dia a dia dos projetos.</p>
+          <ul>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Git &amp; GitHub</li>
+            <li>REST APIs</li>
+          </ul>
+        </section>
+
+        <section class="stack-col" aria-labelledby="stack-qualidade">
+          <h3 id="stack-qualidade">Qualidade</h3>
+          <p class="stack-note">O que eu uso para verificar comportamento antes de dizer que está pronto.</p>
+          <ul>
+            <li>Playwright</li>
+            <li>Vitest</li>
+            <li>ESLint</li>
+            <li>Axe</li>
+          </ul>
+        </section>
+
+        <section class="stack-col" aria-labelledby="stack-explorando">
+          <h3 id="stack-explorando">Explorando nos projetos</h3>
+          <p class="stack-note">Em uso real, com apoio de documentação. Ainda consolidando.</p>
+          <ul>
+            <li>Node.js</li>
+            <li>Supabase</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       05 · EXPERIÊNCIA E FORMAÇÃO
+       ============================================================ -->
+  <section class="section section-alt" id="experiencia" aria-labelledby="experiencia-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-index mono">05</p>
+        <h2 id="experiencia-titulo">Experiência e formação</h2>
+        <p class="section-intro">
+          Comecei configurando plataforma, testando, dando suporte técnico e
+          analisando operação. Nos últimos anos passei a levantar requisito,
+          desenhar solução e homologar entrega. É essa leitura de requisito e de
+          regra de negócio que eu levo para o desenvolvimento.
+        </p>
+      </div>
+
+      <div class="xp-grid">
+
+        <div class="xp-main">
+          <ol class="roles">
+            <li class="role role-current">
+              <p class="mono role-dates">Dez/2021 a atual</p>
+              <h3>Customer Success Specialist <span class="role-org">· Olos Tecnologia</span></h3>
+              <p class="role-sub">Pré-vendas técnicas, análise de requisitos e desenho de soluções</p>
+              <ul class="marks">
+                <li>Levantamento e análise de requisitos com clientes e área comercial, avaliando viabilidade técnica de customizações e implantações.</li>
+                <li>Desenho funcional de soluções e elaboração de SOW, definindo escopo técnico, premissas e critérios de entrega.</li>
+                <li>Leitura de documentação técnica e de APIs, com testes em Postman: requests, responses, JSON e retornos de integração.</li>
+                <li>Testes funcionais, validações e homologações em projetos de implantação e customização da plataforma SaaS.</li>
+                <li>Interface entre cliente, Comercial, Desenvolvimento e Operações, traduzindo necessidade de negócio em requisito técnico.</li>
+              </ul>
+            </li>
+
+            <li class="role">
+              <p class="mono role-dates">Out/2020 a Nov/2021</p>
+              <h3>Analista Pleno de Customer Experience <span class="role-org">· Olos Tecnologia</span></h3>
+              <p class="role-sub">Análise de problemas envolvendo plataforma e operação, apoio à melhoria de processos e ponte entre as demandas de negócio e as equipes técnicas.</p>
+            </li>
+
+            <li class="role">
+              <p class="mono role-dates">Set/2019 a Set/2020</p>
+              <h3>Analista de Controldesk Jr. <span class="role-org">· Olos Tecnologia</span></h3>
+              <p class="role-sub">Suporte técnico e operacional à plataforma: configuração, validação, investigação de problemas e análise de indicadores da operação.</p>
+            </li>
+
+            <li class="role">
+              <p class="mono role-dates">Fev/2014 a Set/2019</p>
+              <h3>Analista de Controldesk <span class="role-org">· System Interact e Liderança</span></h3>
+              <p class="role-sub">Implantação e configuração de discadores, URA e CRM. Suporte técnico, treinamento de usuários, análise de dados e planejamento de estratégias de operação. Evolução de operador a analista ao longo do período.</p>
+            </li>
+          </ol>
+        </div>
+
+        <aside class="xp-side" aria-label="Formação, cursos e idiomas">
+          <section class="xp-block">
+            <h3>Formação</h3>
+            <p class="xp-item-title">Análise e Desenvolvimento de Sistemas</p>
+            <p class="xp-item-org">Gran Faculdade · 3º semestre em andamento</p>
+            <ul class="xp-list">
+              <li>Desenvolvimento Back-End</li>
+              <li>Algoritmos e Estrutura de Dados</li>
+              <li>Redes e Segurança da Informação</li>
+              <li>Modelagem e Gerenciamento de Processos de Negócio</li>
+            </ul>
+          </section>
+
+          <section class="xp-block">
+            <h3>Cursos</h3>
+            <p class="xp-item-title">JavaScript, prática de programação</p>
+            <p class="xp-item-org">Codédex · em andamento, conteúdo em inglês</p>
+            <p class="xp-item-title">Lógica de Programação e JavaScript</p>
+            <p class="xp-item-org">Alura</p>
+          </section>
+
+          <section class="xp-block">
+            <h3>Idiomas</h3>
+            <p class="xp-lang"><span>Português</span><span>Nativo</span></p>
+            <p class="xp-lang"><span>Inglês</span><span>Intermediário</span></p>
+            <p class="xp-item-org">Vivência de seis meses em Dublin, Irlanda, e estudo contínuo de inglês técnico.</p>
+          </section>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       06 · CONTATO
+       ============================================================ -->
+  <section class="section" id="contato" aria-labelledby="contato-titulo">
+    <div class="wrap">
+      <div class="section-head contact-head">
+        <p class="section-index mono">06</p>
+        <h2 id="contato-titulo">Vamos conversar?</h2>
+        <p class="lead">
+          Estou buscando oportunidades para desenvolver minha carreira em
+          software, principalmente em posições júnior de desenvolvimento web e
+          front-end. Tenho interesse em ambientes onde eu possa continuar
+          construindo, testando e aprendendo na prática.
+        </p>
+        <p class="contact-sub">
+          Posso apresentar meus projetos e explicar como transformo uma ideia em
+          solução, definindo lógica, regras, testes e conduzindo a implementação
+          com apoio de IA.
+        </p>
+      </div>
+
+      <!-- LINKS — para atualizar, basta trocar os href abaixo. -->
+      <ul class="contact-links">
+        <li>
+          <span class="mono contact-label">E-mail</span>
+          <a href="mailto:keven.souza@icloud.com">keven.souza@icloud.com</a>
+        </li>
+        <li>
+          <span class="mono contact-label">LinkedIn</span>
+          <a href="https://linkedin.com/in/keven-souza-a89287110" target="_blank" rel="noopener">linkedin.com/in/<wbr>keven-souza-a89287110</a>
+        </li>
+        <li>
+          <span class="mono contact-label">GitHub</span>
+          <a href="https://github.com/kevensouza-dev" target="_blank" rel="noopener">github.com/kevensouza-dev</a>
+        </li>
+        <li>
+          <span class="mono contact-label">Currículo</span>
+          <a href="assets/Keven-Souza-CV.pdf" download>Baixar em PDF</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>Keven da Silva Cruz de Souza · São Paulo · <span data-ano>2026</span></p>
+    <p class="mono">Site estático em HTML, CSS e JavaScript.</p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

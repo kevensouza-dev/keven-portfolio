@@ -1,0 +1,13 @@
+# sistema
+.DS_Store
+Thumbs.db
+
+# editores
+.vscode/
+.idea/
+
+# dependências (o site não usa nenhuma; a pasta só apareceria por engano)
+node_modules/
+
+# deploy
+.vercel
