@@ -30,10 +30,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles.css?v=2026-11-sistemas-camadas-v18">
+<script>
+  try {
+    var temaSalvo = localStorage.getItem('keven-portfolio-theme');
+    if (temaSalvo === 'dark' || temaSalvo === 'light') document.documentElement.dataset.theme = temaSalvo;
+  } catch (erro) {}
+</script>
 </head>
 
 <body>
+<canvas class="space-field" data-space-field aria-hidden="true"></canvas>
 
 <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
@@ -42,8 +49,11 @@
      ============================================================ -->
 <header class="site-header" id="topo">
   <div class="wrap header-inner">
-    <a class="brand" href="#topo">
-      <span class="brand-mark" aria-hidden="true">KS</span>
+    <a class="brand" href="#topo" data-scroll-top>
+      <span class="brand-mark" aria-hidden="true">
+        <span class="brand-mark-text">KS</span>
+        <img class="brand-avatar-photo" src="assets/images/keven-souza.jpg" alt="">
+      </span>
       <span class="brand-name">Keven Souza</span>
     </a>
 
@@ -62,6 +72,17 @@
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
+
+    <div class="language-switcher" aria-label="Idioma do portfólio">
+      <span class="language-label mono">Idioma</span>
+      <a class="language-option is-active" href="?lang=pt" data-language="pt" aria-current="true" aria-label="Português, idioma atual">PT</a>
+      <a class="language-option" href="?lang=en" data-language="en" aria-label="English">EN</a>
+      <a class="language-option" href="?lang=es" data-language="es" aria-label="Español">ES</a>
+    </div>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Ativar tema espacial">
+      <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 15.6A8.7 8.7 0 0 1 8.4 3.4 8.9 8.9 0 1 0 20.6 15.6Z"></path></svg>
+      <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path></svg>
+    </button>
   </div>
 </header>
 
@@ -71,6 +92,7 @@
        HERO
        ============================================================ -->
   <section class="hero" aria-labelledby="hero-titulo">
+    <canvas class="hero-canvas" data-hero-canvas aria-hidden="true"></canvas>
     <div class="wrap hero-grid">
 
       <div class="hero-main">
@@ -99,29 +121,24 @@
           <a class="btn btn-primary" href="#projetos">Ver projetos</a>
           <a class="btn" href="https://linkedin.com/in/keven-souza-a89287110" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn" href="https://github.com/kevensouza-dev" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="assets/Keven-Souza-CV.pdf" download>Baixar currículo</a>
+          <a class="btn" href="assets/Keven-Souza-CV.pdf" download data-cv-download>Baixar currículo</a>
         </div>
       </div>
 
-      <aside class="hero-rail" aria-label="Ficha profissional">
-        <!-- FOTO — para trocar, substitua assets/images/keven-souza.jpg por
-             outro recorte quadrado. Se o arquivo faltar, entra um monograma
-             discreto no lugar, sem imagem quebrada. -->
-        <figure class="portrait" data-portrait>
-          <img src="assets/images/keven-souza.jpg" alt="Retrato de Keven Souza" width="700" height="700" decoding="async">
-          <figcaption class="portrait-fallback" aria-hidden="true">
-            <span>KS</span>
-            <small>foto pendente</small>
-          </figcaption>
-        </figure>
-
-        <dl class="facts">
-          <div><dt>Local</dt><dd>São Paulo, SP</dd></div>
-          <div><dt>Formação</dt><dd>ADS · 4º semestre</dd></div>
-          <div><dt>Foco</dt><dd>Front-end · Web · Aplicações</dd></div>
-          <div><dt>Idiomas</dt><dd>Português nativo · Inglês intermediário</dd></div>
-        </dl>
-      </aside>
+      <div class="hero-stage" data-depth-stage>
+        <div class="hero-plane hero-plane--legal" aria-hidden="true">
+          <div class="legal-shot hero-teaser-app">
+            <div class="legal-shot__sidebar"><div class="legal-shot__brand"><i></i><strong>Painel Jurídico</strong></div><div class="legal-shot__nav"><span>▦ <i>Início</i></span><span>◷ <i>Prazos</i></span><b>▤ <span>Financeiro</span></b><span>□ <i>Casos</i></span></div><small class="legal-shot__demo">DADOS DEMONSTRATIVOS</small></div>
+            <div class="legal-shot__app"><div class="legal-shot__topbar"><strong>Financeiro</strong><span>⌕ Buscar</span></div><div class="legal-shot__content"><small class="hero-teaser-label mono">DADOS DEMONSTRATIVOS</small><div class="legal-shot__heading"><h4>Financeiro</h4><p>Visão geral de recebimentos fictícios.</p></div><div class="legal-shot__summary"><div class="legal-shot__receivable"><small>Falta receber</small><strong><i>R$</i> 3.500,00</strong><div class="legal-shot__bar"><i></i><b></b></div></div><div class="legal-shot__metrics"><span><small>Recebido</small><strong>R$ 6.500,00</strong></span><span><small>Combinado</small><strong>R$ 10.000,00</strong></span></div></div></div></div>
+          </div>
+        </div>
+        <div class="hero-plane hero-plane--vertex" aria-hidden="true">
+          <div class="vertex-shot hero-teaser-app">
+            <div class="vertex-shot__sidebar"><div class="vertex-shot__brand"><b>V</b><strong>vértice</strong></div><small>SEU DINHEIRO</small><nav><b>▦ Panorama</b><span>◇ Dívidas 03</span></nav><small>DADOS DE EXEMPLO</small></div>
+            <div class="vertex-shot__app"><div class="vertex-shot__topbar"><strong>Panorama</strong><i></i></div><div class="vertex-shot__content"><small class="hero-teaser-label mono">DADOS DE EXEMPLO</small><div class="vertex-shot__balance"><div><small>SALDO TOTAL EM ABERTO</small><b>EXEMPLO</b></div><strong>R$ 11.000,00</strong><p>R$ 9.000,00 já pagos</p><i><b></b></i><div class="vertex-shot__progress"><span>Progresso</span><strong>45% quitado</strong></div></div><div class="vertex-shot__debts"><small>PRIORIDADE</small><h5>Dívida Exemplo A</h5></div></div></div>
+          </div>
+        </div>
+      </div>
 
     </div>
 
@@ -129,7 +146,7 @@
       <ul class="figures">
         <li><strong>+12 anos</strong><span>atuação em tecnologia e sistemas</span></li>
         <li><strong>ADS</strong><span>4º semestre</span></li>
-        <li><strong>2 projetos próprios</strong><span>em desenvolvimento</span></li>
+        <li><strong>3 projetos próprios</strong><span>em desenvolvimento</span></li>
       </ul>
     </div>
   </section>
@@ -201,7 +218,7 @@
         </li>
 
         <!-- FASE 3 -->
-        <li class="phase">
+        <li class="phase phase--branch phase--branch-a">
           <div class="phase-meta">
             <p class="mono phase-number">Fase 03</p>
             <h3 class="phase-project">Segundo Cérebro</h3>
@@ -227,7 +244,7 @@
         </li>
 
         <!-- Conector: as fases 3 e 4 correram em paralelo -->
-        <li class="phase-link">
+        <li class="phase-link phase-link--branch">
           <p>
             As fases 3 e 4 amadureceram em paralelo. O e-commerce foi o primeiro
             projeto a crescer já absorvendo os aprendizados que o Painel
@@ -236,7 +253,7 @@
         </li>
 
         <!-- FASE 4 -->
-        <li class="phase">
+        <li class="phase phase--branch phase--branch-b">
           <div class="phase-meta">
             <p class="mono phase-number">Fase 04</p>
             <h3 class="phase-project">E-commerce de Motopeças</h3>
@@ -289,7 +306,7 @@
         <p class="section-index mono">02</p>
         <h2 id="projetos-titulo">Projetos</h2>
         <p class="section-intro">
-          Dois projetos próprios em desenvolvimento ativo. São eles que puxam o que eu
+          Três projetos próprios em desenvolvimento ativo. São eles que puxam o que eu
           estudo: cada funcionalidade nova traz um problema técnico que eu ainda
           não tinha enfrentado.
         </p>
@@ -311,9 +328,15 @@
           </ul>
           <p class="project-case"><a class="link-arrow" href="https://github.com/kevensouza-dev/ecommerce-motopecas-showcase" target="_blank" rel="noopener noreferrer">Ver case técnico</a></p>
         </div>
-        <a class="project-media" href="https://github.com/kevensouza-dev/ecommerce-motopecas-showcase" target="_blank" rel="noopener noreferrer" aria-label="Abrir case técnico do E-commerce de Motopeças">
-          <img src="assets/projects/ecommerce-motopecas-home.webp" alt="Página inicial demonstrativa do E-commerce de Motopeças, com busca de peças e retirada presencial" width="1586" height="992" loading="lazy" decoding="async">
-        </a>
+        <div class="project-stage project-stage--ecommerce" data-depth-stage>
+          <div class="project-backplate project-backplate--far" aria-hidden="true"><span>Catálogo</span></div>
+          <div class="project-backplate project-backplate--near" aria-hidden="true"><span>Pedido</span></div>
+          <a class="project-media project-app project-carousel" href="https://github.com/kevensouza-dev/ecommerce-motopecas-showcase" target="_blank" rel="noopener noreferrer" aria-label="Abrir case técnico do E-commerce de Motopeças" data-carousel="motopeças">
+            <img class="project-carousel-image is-active" src="assets/projects/ecommerce-motopecas-home.webp" alt="Página inicial demonstrativa do E-commerce de Motopeças, com busca de peças e retirada presencial" width="1586" height="992" loading="lazy" decoding="async">
+            <img class="project-carousel-image" src="assets/projects/ecommerce-motopecas-catalog.webp" alt="Catálogo demonstrativo do E-commerce de Motopeças" width="1586" height="992" loading="lazy" decoding="async">
+            <span class="project-carousel-progress" aria-hidden="true"><i></i></span>
+          </a>
+        </div>
       </article>
 
       <!-- ---------- PROJETO: PAINEL JURÍDICO ---------- -->
@@ -321,20 +344,86 @@
         <div class="project-copy">
           <p class="mono project-number">02</p>
           <h3>Painel Jurídico</h3>
-          <p class="mono project-stack">JavaScript · Supabase · PostgreSQL · Vitest · Playwright</p>
+          <p class="mono project-stack">React · TypeScript · Supabase · PostgreSQL · Vitest · Playwright</p>
           <p class="project-lead">
-            Aplicação web para organizar casos, prazos e rotinas financeiras de advogados e escritórios pequenos.
+            Workspace jurídico em evolução, hoje em beta fechado com dados fictícios, para organizar casos, prazos, clientes, colaboração e rotinas financeiras.
           </p>
           <ul class="marks">
-            <li>Regras de negócio e domínio financeiro tratados fora da interface.</li>
-            <li>Recebimentos corrigidos por estorno, com histórico preservado.</li>
-            <li>Separação gradual entre interface e persistência, apoiada por testes.</li>
+            <li>Interface Lente em React para casos, prazos, clientes, parceiros e relatórios.</li>
+            <li>Financeiro por caso com parcelas, recebimentos, estornos, repasses e evolução temporal atualizada após cada operação.</li>
+            <li>Beta fechado autenticado, publicado separadamente e limitado a dados fictícios.</li>
           </ul>
+          <p class="project-status mono">Beta fechado · dados fictícios</p>
           <p class="project-case"><a class="link-arrow" href="https://github.com/kevensouza-dev/painel-juridico-showcase" target="_blank" rel="noopener noreferrer">Ver case técnico</a></p>
         </div>
-        <a class="project-media" href="https://github.com/kevensouza-dev/painel-juridico-showcase" target="_blank" rel="noopener noreferrer" aria-label="Abrir case técnico do Painel Jurídico">
-          <img src="assets/projects/painel-juridico-dashboard.webp" alt="Painel demonstrativo do Painel Jurídico, com prazos e posição financeira da carteira" width="1440" height="900" loading="lazy" decoding="async">
-        </a>
+        <div class="project-stage project-stage--demo" data-depth-stage data-demo="legal">
+          <div class="project-backplate project-backplate--far" aria-hidden="true"></div>
+          <div class="project-backplate project-backplate--near" aria-hidden="true"></div>
+          <div class="demo-toolbar"><span class="mono">DADOS DEMONSTRATIVOS · Painel Jurídico · CICLO AUTOMÁTICO</span></div>
+        <div class="project-media project-app legal-shot" aria-label="Demonstração visual do Painel Jurídico">
+          <div class="legal-shot__sidebar">
+            <div class="legal-shot__brand"><i></i><strong>Painel Jurídico</strong></div>
+            <div class="legal-shot__profile"><b>U</b><span><strong>Dr. Usuário</strong><small>Meu perfil</small></span></div>
+            <div class="legal-shot__nav"><b>▦ <span>Início</span></b><span>◷ <i>Prazos</i></span><span>▤ <i>Financeiro</i></span><span>□ <i>Casos</i></span><span>♙ <i>Clientes</i></span><span>♧ <i>Parceiros</i></span><span>▥ <i>Relatórios</i></span></div>
+            <small class="legal-shot__demo">DADOS DEMONSTRATIVOS</small>
+          </div>
+          <div class="legal-shot__app">
+            <div class="legal-shot__topbar"><strong>Início</strong><span>⌕&nbsp; Buscar</span><b>Dr. Usuário</b></div>
+            <div class="legal-shot__content">
+              <div class="legal-shot__heading"><h4>Início</h4><p>Resumo dos casos, prazos e recebimentos do escritório.</p></div>
+              <div class="legal-shot__notice"><strong>Evolução financeira em preparação</strong><span>O gráfico de casos está disponível. A série monetária aguarda uma projeção temporal canônica.</span></div>
+              <div class="legal-shot__summary">
+                <div class="legal-shot__receivable"><small>Falta receber</small><strong><i>R$</i> <span data-demo-value="remaining">5.000,00</span></strong><p>de R$ 10.000,00 previstos após as taxas</p><div class="legal-shot__bar"><i></i><b></b><em></em></div><div class="legal-shot__legend"><span>■ Recebido&nbsp; <b>R$ <span data-demo-value="received-short">5.000</span></b></span><span>▧ A vencer&nbsp; <b>R$ <span data-demo-value="remaining-short">5.000</span></b></span><span>■ Vencido&nbsp; <b>R$ 0</b></span></div></div>
+                <div class="legal-shot__metrics"><span><small>Valor combinado</small><strong>R$ 10.000,00</strong></span><span class="demo-focus-target"><small>Recebido</small><strong>R$ <span data-demo-value="received">5.000,00</span></strong></span><span><small>Vencido</small><strong>R$ 0,00</strong></span><span><small>Total de casos</small><strong>1</strong></span></div>
+              </div>
+              <div class="legal-shot__cards"><div><strong>Evolução mensal</strong><small>Casos nos últimos 12 meses</small><i></i><i></i><i></i></div><div><strong>Casos concluídos</strong><small>Proporção com status concluído</small><b>0%</b></div></div>
+            </div>
+          </div>
+        </div>
+          <p class="demo-state" data-demo-state>Pronto para reproduzir a operação demonstrativa.</p>
+          <p class="demo-live" data-demo-live aria-live="polite" aria-atomic="true"></p>
+          <div class="demo-toast" data-demo-toast aria-hidden="true">Recebimento demonstrativo registrado</div>
+        </div>
+      </article>
+
+      <!-- ---------- PROJETO: PAINEL DE DÍVIDAS ---------- -->
+      <article class="project-feature project-feature--debts">
+        <div class="project-copy">
+          <p class="mono project-number">03</p>
+          <h3>Painel de Dívidas</h3>
+          <p class="mono project-stack">HTML · CSS · JavaScript · Playwright</p>
+          <p class="project-lead">
+            O projeto da Fase 01, que nunca parou. Aplicação web demonstrativa para organizar dívidas, parcelas e pagamentos e acompanhar a trajetória de quitação, hoje com as regras separadas da apresentação e testes de navegador.
+          </p>
+          <ul class="marks">
+            <li>Panorama com saldo, próxima parcela, prioridades e o caminho até zero.</li>
+            <li>Regras financeiras separadas da apresentação, exercitadas com carteiras sintéticas.</li>
+            <li>Cadastro, pagamentos e histórico preservados em uma experiência local de demonstração.</li>
+          </ul>
+          <p class="project-status mono">Projeto privado em evolução · dados demonstrativos</p>
+        </div>
+        <div class="project-stage project-stage--demo" data-depth-stage data-demo="vertex">
+          <div class="project-backplate project-backplate--far" aria-hidden="true"></div>
+          <div class="project-backplate project-backplate--near" aria-hidden="true"></div>
+          <div class="demo-toolbar"><span class="mono">DADOS DEMONSTRATIVOS · Vértice · CICLO AUTOMÁTICO</span></div>
+        <div class="project-media project-app vertex-shot" aria-label="Panorama sanitizado e demonstrativo do Painel de Dívidas">
+          <div class="vertex-shot__sidebar"><div class="vertex-shot__brand"><b>V</b><strong>vértice</strong></div><small>SEU DINHEIRO</small><nav><b>▦ Panorama</b><span>◇ Dívidas&nbsp; 03</span><span>⚑ Quitação</span><span>◉ Planejamento</span><span>▥ Relatórios</span></nav><small>SEU ESPAÇO</small><nav><span>♙ Conta</span><span>▣ Assinatura</span><span>▤ Dados</span></nav><div class="vertex-shot__user"><i></i><span><strong>Usuário Demo</strong><small>DADOS DE EXEMPLO</small></span></div></div>
+          <div class="vertex-shot__app">
+            <div class="vertex-shot__topbar"><span>Seu espaço&nbsp; / &nbsp;<strong>Panorama</strong></span><i></i><b>UD</b><em>＋</em></div>
+            <div class="vertex-shot__content">
+              <div class="vertex-shot__hero"><small>DADOS DE EXEMPLO · PANORAMA</small><h4>Seu caminho, <em>mais leve.</em></h4><p>O que falta, o que precisa de atenção e o próximo passo — calculado pelo seu plano.</p></div>
+              <div class="vertex-shot__overview">
+                <div class="vertex-shot__balance"><div><small>SALDO TOTAL EM ABERTO</small><b>DADOS DE EXEMPLO</b></div><strong>R$ <span data-demo-value="balance">12.000,00</span></strong><p>de <b>R$ 20.000,00</b> cadastrados&nbsp; <em>↓ R$ <span data-demo-value="paid">8.000,00</span> já pagos</em></p><i><b></b></i><div class="vertex-shot__progress"><span>Progresso de quitação no plano</span><strong><span data-demo-value="progress">40</span>% quitado</strong></div><div class="vertex-shot__facts"><span><small>QUITAÇÃO PELO PLANO</small><b>Março de 2028</b></span><span><small>DÍVIDAS</small><b>3 ativas</b></span></div></div>
+                <div class="vertex-shot__alert"><small>△ PRECISA DE AÇÃO</small><strong>R$ 3.000,00</strong><p>em atraso em dívidas de exemplo.</p><hr><small>PRÓXIMA PARCELA DO PLANO</small><b>Parcela demonstrativa</b></div>
+              </div>
+              <div class="vertex-shot__debts"><small>PLANO ATUAL</small><h5>Dívidas e prioridades <b>03</b></h5><div class="demo-focus-target"><i>A</i><span><strong>Dívida Exemplo A</strong><small>Parcela demonstrativa</small></span><b>EM ATRASO</b></div><div><i>B</i><span><strong>Dívida Exemplo B</strong><small>Parcela demonstrativa</small></span><b>EM ATRASO</b></div><div><i>C</i><span><strong>Dívida Exemplo C</strong><small>Parcela demonstrativa</small></span><b>EM DIA</b></div></div>
+            </div>
+          </div>
+        </div>
+          <p class="demo-state" data-demo-state>Pronto para reproduzir a operação demonstrativa.</p>
+          <p class="demo-live" data-demo-live aria-live="polite" aria-atomic="true"></p>
+          <div class="demo-toast" data-demo-toast aria-hidden="true">Pagamento demonstrativo registrado</div>
+        </div>
       </article>
 
       <p class="note">
@@ -356,7 +445,7 @@
         <p class="section-intro">
           O assunto aqui é construir e manter software. Nada disso veio de
           metodologia: cada hábito abaixo nasceu de alguma coisa que deu errado
-          enquanto eu construía os dois projetos.
+          enquanto eu construía esses projetos.
         </p>
       </div>
 
@@ -452,7 +541,7 @@
       </div>
 
       <div class="stack-grid">
-        <section class="stack-col" aria-labelledby="stack-uso">
+        <section class="stack-col" aria-labelledby="stack-uso" tabindex="0">
           <h3 id="stack-uso">Uso atual</h3>
           <p class="stack-note">O que eu leio, altero e reviso no dia a dia dos projetos.</p>
           <ul>
@@ -466,7 +555,7 @@
           </ul>
         </section>
 
-        <section class="stack-col" aria-labelledby="stack-qualidade">
+        <section class="stack-col" aria-labelledby="stack-qualidade" tabindex="0">
           <h3 id="stack-qualidade">Qualidade</h3>
           <p class="stack-note">O que eu uso para verificar comportamento antes de dizer que está pronto.</p>
           <ul>
@@ -477,7 +566,7 @@
           </ul>
         </section>
 
-        <section class="stack-col" aria-labelledby="stack-explorando">
+        <section class="stack-col" aria-labelledby="stack-explorando" tabindex="0">
           <h3 id="stack-explorando">Explorando nos projetos</h3>
           <p class="stack-note">Em uso real, com apoio de documentação. Ainda consolidando.</p>
           <ul>
@@ -499,10 +588,18 @@
         <p class="section-index mono">05</p>
         <h2 id="experiencia-titulo">Experiência e formação</h2>
         <p class="section-intro">
-          Comecei configurando plataformas, testando, dando suporte técnico e
-          analisando operações. Nos últimos anos passei a levantar requisitos,
-          desenhar soluções e homologar entregas. É essa leitura de requisito e
-          de regra de negócio que eu levo para o desenvolvimento.
+          Não venho de fora da tecnologia, mas também não vim do
+          desenvolvimento. Comecei configurando plataformas, testando, dando
+          suporte técnico e analisando operações. Nos últimos anos passei a
+          levantar requisitos, desenhar soluções e homologar entregas.
+        </p>
+        <p class="section-intro">
+          Em doze anos aprendi discadores, URA, CRM e plataformas SaaS inteiras
+          do zero, dentro de projeto, com prazo e cliente do outro lado. Entrar
+          numa stack que eu ainda não conheço e começar a produzir é a parte da
+          minha carreira que mais se repete. É isso que eu trago para o
+          desenvolvimento, junto com a leitura de requisito e de regra de
+          negócio.
         </p>
       </div>
 
@@ -613,7 +710,7 @@
         </li>
         <li>
           <span class="mono contact-label">Currículo</span>
-          <a href="assets/Keven-Souza-CV.pdf" download>Baixar em PDF</a>
+          <a href="assets/Keven-Souza-CV.pdf" download data-cv-download>Baixar em PDF</a>
         </li>
       </ul>
     </div>
@@ -628,6 +725,6 @@
   </div>
 </footer>
 
-<script src="js/main.js" defer></script>
+<script src="js/main.js?v=2026-11-space-motion-v8" defer></script>
 </body>
 </html>

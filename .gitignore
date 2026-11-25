@@ -14,3 +14,6 @@ node_modules/
 
 # fonte editável privada do currículo (o artefato público é só o PDF)
 cv-source/
+
+# fontes editáveis dos currículos EN/ES (o artefato público é só o PDF)
+assets/cv/
