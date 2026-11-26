@@ -899,16 +899,8 @@ html.theme-transition::view-transition-new(root){
   max-width:62ch;
   margin-bottom:0;
 }
-.role-current .role-sub{ margin-bottom:16px; }
-.role-current .role-dates{ color:var(--petrol); }
-.role-current .role-dates::before{
-  content:"";
-  display:inline-block;
-  width:6px; height:6px; border-radius:50%;
-  background:var(--accent);
-  margin-right:8px;
-  vertical-align:middle;
-}
+.role-latest .role-sub{ margin-bottom:16px; }
+
 
 .xp-block{ margin-bottom:34px; }
 .xp-block:last-child{ margin-bottom:0; }
